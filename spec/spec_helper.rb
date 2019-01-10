@@ -6,7 +6,7 @@ if ENV['CI'] == 'true'
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
 
-require 'arkecosystem/crypto'
+require 'phantomchain/crypto'
 require 'btcruby'
 require 'bundler/setup'
 require 'ostruct'

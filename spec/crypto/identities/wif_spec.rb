@@ -1,5 +1,5 @@
-describe ArkEcosystem::Crypto::Identities::WIF do
-  let(:network) { ArkEcosystem::Crypto::Networks::Devnet }
+describe PhantomChain::Crypto::Identities::WIF do
+  let(:network) { PhantomChain::Crypto::Networks::Devnet }
 
   describe '#from_passphrase' do
     it 'should be ok' do

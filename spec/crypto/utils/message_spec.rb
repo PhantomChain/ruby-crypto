@@ -1,4 +1,4 @@
-describe ArkEcosystem::Crypto::Utils::Message do
+describe PhantomChain::Crypto::Utils::Message do
   describe '#sign' do
     it 'should be ok' do
       fixture = JSON.parse!(File.read('spec/fixtures/message.json'), object_class: OpenStruct)

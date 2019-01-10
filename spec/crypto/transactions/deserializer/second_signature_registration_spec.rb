@@ -1,9 +1,9 @@
-describe ArkEcosystem::Crypto::Transactions::Deserializers::SecondSignatureRegistration do
+describe PhantomChain::Crypto::Transactions::Deserializers::SecondSignatureRegistration do
   describe '#deserialize' do
     it 'should be ok if signed with a passphrase' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/second_signature_registration/second-passphrase.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -18,7 +18,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::SecondSignatureRegis
       expect(actual.verify).to eq(true)
 
       # special case as the type 1 transaction itself has no recipientId
-      expect(actual.recipient_id).to eq(ArkEcosystem::Crypto::Identities::Address.from_public_key(actual.sender_public_key, actual.network))
+      expect(actual.recipient_id).to eq(PhantomChain::Crypto::Identities::Address.from_public_key(actual.sender_public_key, actual.network))
     end
   end
 end

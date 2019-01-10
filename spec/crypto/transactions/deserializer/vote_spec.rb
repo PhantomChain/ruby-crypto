@@ -1,9 +1,9 @@
-describe ArkEcosystem::Crypto::Transactions::Deserializers::Vote do
+describe PhantomChain::Crypto::Transactions::Deserializers::Vote do
   describe '#deserialize' do
     it 'should be ok if signed with a passphrase' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/vote/passphrase.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -22,7 +22,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Vote do
     it 'should be ok if signed with a second passphrase' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/vote/second-passphrase.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)

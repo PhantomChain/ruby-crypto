@@ -1,9 +1,9 @@
-describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
+describe PhantomChain::Crypto::Transactions::Deserializers::Transfer do
   describe '#deserialize' do
     it 'should be ok if signed with a passphrase' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/passphrase.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -24,7 +24,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
     it 'should be ok if signed with a second passphrase' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/second-passphrase.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -46,7 +46,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
     it 'should be ok if signed with a passphrase and vendor field' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/passphrase-with-vendor-field.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -66,7 +66,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
     it 'should be ok if signed with a second passphrase and vendor field' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/second-passphrase-with-vendor-field.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -87,7 +87,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
     it 'should be ok if signed with a passphrase and vendor field hex' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/passphrase-with-vendor-field-hex.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
@@ -107,7 +107,7 @@ describe ArkEcosystem::Crypto::Transactions::Deserializers::Transfer do
     it 'should be ok if signed with a second passphrase and vendor field hex' do
       transaction = JSON.parse!(File.read('spec/fixtures/transactions/transfer/second-passphrase-with-vendor-field-hex.json'), object_class: OpenStruct)
 
-      actual = ArkEcosystem::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
+      actual = PhantomChain::Crypto::Transactions::Deserializer.new(transaction['serialized']).deserialize
 
       expect(actual.version).to eq(1)
       expect(actual.network).to eq(30)
