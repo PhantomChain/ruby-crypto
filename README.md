@@ -1,23 +1,19 @@
-# Ark Ruby - Crypto
+# PHANTOM Ruby - Crypto
 
-<p align="center">
-    <img src="https://github.com/ArkEcosystem/ruby-crypto/blob/master/banner.png" />
-</p>
+> A simple Ruby Cryptography Implementation for the PHANTOM Blockchain.
 
-> A simple Ruby Cryptography Implementation for the Ark Blockchain.
-
-[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/ruby-crypto)](https://circleci.com/gh/ArkEcosystem/ruby-crypto)
-[![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/ruby-crypto)](https://codecov.io/gh/arkecosystem/ruby-crypto)
-[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/ruby-crypto)](https://github.com/ArkEcosystem/ruby-crypto/releases)
+[![Build Status](https://badgen.now.sh/circleci/github/PhantomChain/ruby-crypto)](https://circleci.com/gh/PhantomChain/ruby-crypto)
+[![Codecov](https://badgen.now.sh/codecov/c/github/phantomchain/ruby-crypto)](https://codecov.io/gh/phantomchain/ruby-crypto)
+[![Latest Version](https://badgen.now.sh/github/release/PhantomChain/ruby-crypto)](https://github.com/PhantomChain/ruby-crypto/releases)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
 ## Documentation
 
-You can find installation instructions and detailed instructions on how to use this package at the [dedicated documentation site](https://docs.ark.io/sdk/cryptography/ruby.html).
+You can find installation instructions and detailed instructions on how to use this package at the [dedicated documentation site](https://docs.phantom.org/sdk/cryptography/ruby.html).
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -27,4 +23,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) © [PhantomChain](https://phantom.org)
